@@ -1,24 +1,16 @@
-# folio-vue
+# Folio | Vue
 
-## Project setup
+## To Install Packages 
 ```
-npm install
+npm i
 ```
 
-### Compiles and hot-reloads for development
+### Run Dev Env
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Build For Production
 ```
 npm run build
 ```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
