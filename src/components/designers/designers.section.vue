@@ -1,5 +1,6 @@
 <template>
 <div>
+    <h1>I'm A Designer</h1>
   <div class="designers">
       <Designer v-for="(designer, index) in designers" :key="index" :designer="designer"/>
   </div>
@@ -18,6 +19,13 @@ export default {
     return {
       designers: [{
           name: "Oliver Griffith-Jones",
+          url: "twitter.com/olzgj",
+          about: "I am a person"
+          
+      },{
+          name: "Oliver Griffith-Jones",
+          url: "twitter.com/olzgj",
+          about: "I am a person"
           
       }]
     };
@@ -28,5 +36,7 @@ export default {
 <style lang="scss" scoped>
 @import "@/scss/_variables.scss";
 
-
+h1 {
+    color: green;
+}
 </style>
