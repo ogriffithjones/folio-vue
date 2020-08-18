@@ -1,0 +1,86 @@
+// Colors
+
+// Primary
+$primary-bannana: #F6EEE3;
+$primary-charcoal: #191917;
+
+// Seccondary
+$seccondary-sun_burn: #E63A2E;
+
+// Accent
+$accent-snow: #FFFEFD;
+$accent-stone: #636769;
+$accent-mellow: #F47F65;
+
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Raleway:wght@300;400&display=swap');
+$font-main: ''Playfair Display', serif';
+$font-seccondary: ''Raleway', sans-serif';
+
+// Headdings
+@mixin heading-large {
+    /* Heading / Large */
+
+    font-family: $font-main;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 156px;
+    line-height: 208px;
+    /* identical to box height */
+
+    letter-spacing: 0.03em;
+} 
+
+@mixin heading-sub {
+    /* Heading / Sub */
+
+    font-family: $font-main;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 48px;
+    /* identical to box height */
+}
+
+@mixin heading-title {
+    /* Heading / Title */
+
+    font-family: $font-main;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24.8764px;
+    line-height: 33px;
+}
+
+@mixin heading-thin {
+    /* Heading / Thin */
+
+    font-family: $font-main;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18.662px;
+    line-height: 25px;
+    /* identical to box height */
+}
+
+// Paragraphs
+@mixin paragraph-main {
+    /* Paragraph / Main */
+
+    font-family: $font-seccondary;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+@mixin paragraph-small {
+    /* Paragraph / Small */
+
+    font-family: $font-seccondary;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 10.5026px;
+    line-height: 12px;
+}
