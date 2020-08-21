@@ -1,11 +1,16 @@
 <template>
-  <h1>Hello</h1>
+  <DesignerSection></DesignerSection>
 </template>
 
 <script>
-export default {
+import designerSection from './designer.section';
 
-}
+export default {
+  name: "Designer-Section",
+  components: {
+    DesignerSection: designerSection,
+  },
+};
 </script>
 
 <style lang="scss" scoped>
