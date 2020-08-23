@@ -25,10 +25,9 @@ export default {
 
 .project {
   //Size
-  width: 350px;
+  min-width: 350px;
   //Spacing
-  margin: 15px;
-  padding-right: 30px;
+  padding: 0 30px;
   border-right: solid 1px $seccondary-sun_burn;
 }
 
@@ -53,6 +52,7 @@ img {
   //Size
   width: 100%;
   height: 200px;
+  //Scaling
   object-fit: cover;
 }
 

@@ -1,11 +1,19 @@
 <template>
-  <div class="projects">
-    <ProjectCard
+<section>
+    <!-- Content -->
+  <div class="content">
+    <!-- Designer Name -->
+    <h1>Designer 1</h1>
+    <!-- Projects -->
+    <div class="projects">
+      <ProjectCard
       v-for="(project, index) in projects"
       v-bind:key="index"
       :project="project"
     />
+    </div>
   </div>
+</section>
 </template>
 
 <script>
@@ -56,7 +64,32 @@ export default {
 <style lang="scss" scoped>
 @import "@/scss/_variables.scss";
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+h1 {
+  padding: 0 50px;
+  
+}
+
 .projects {
     display: flex;
+    //Size
+    overflow: scroll;
+    border-left: 1px solid $seccondary-sun_burn;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
 }
 </style>
