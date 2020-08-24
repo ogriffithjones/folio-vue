@@ -1,14 +1,14 @@
 <template>
 <section>
-    <h1>Designer</h1>
-    <!-- Projects -->
-    <div class="mask"></div>
-    <div class="projects">
-      <ProjectCard
+  <h1>Designer</h1>
+    <div class="projects-wrapper">
+      <div class="projects">
+        <ProjectCard
       v-for="(project, index) in projects"
       v-bind:key="index"
       :project="project"
     />
+      </div>
     </div>
 </section>
 </template>
@@ -52,34 +52,6 @@ export default {
             "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
           img: "https://picsum.photos/seed/picsum/1000"
         },
-        {
-          id: 5,
-          title: "Project title",
-          body:
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-          img: "https://picsum.photos/seed/picsum/1000"
-        },
-        {
-          id: 6,
-          title: "Project title",
-          body:
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-          img: "https://picsum.photos/seed/picsum/1000"
-        },
-        {
-          id: 7,
-          title: "Project title",
-          body:
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-          img: "https://picsum.photos/seed/picsum/1000"
-        },
-        {
-          id: 8,
-          title: "Project title",
-          body:
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-          img: "https://picsum.photos/seed/picsum/1000"
-        }
       ],
     };
   },
@@ -99,44 +71,33 @@ section {
   //Position
   display: flex;
   align-items: center;
+  justify-content: center;
   //Size
   height: 100vh;
   overflow: hidden;
   position: relative;
 }
 
-.mask {
-  background: rgb(246,238,224);
-  background: linear-gradient(90deg, rgba(246,238,224,1) 50%, rgba(246,238,224,0) 100%);
-  height: 500px;
-  width: 700px;
+h1 {
+  @include heading-large;
   position: absolute;
-  z-index: 1000;
-  left: 70px;
 }
 
-h1 {
-  //Spacing
-  margin: 0 50px;
-  //Size
-  @include heading-large;
-  //Color
-  color: $seccondary-sun_burn;
-  position: absolute;
-  top: 50%;
-  z-index: 1001;
-  
-}
-.projects {
+.projects-wrapper {
     //Size
-    width: 100vw;
-    height: 90vw;
+    width: 90vh;
+    height: 100vw;
     display: flex;
-    align-items: center;
+
     transform: rotate(-90deg);
     overflow-y: scroll;
     flex-direction: column;
+    border: 1px solid black;
+}
 
+.projects {
+  margin: 1000px auto;
+  align-items: center;
 }
 
 /* make scrollbar transparent */
