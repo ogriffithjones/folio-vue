@@ -1,16 +1,19 @@
 <template>
-<section>
-  <h1>Designer</h1>
-    <div class="projects-wrapper">
-      <div class="projects">
+  <section>
+  <div class="right-content">
+    <div class="projects">
         <ProjectCard
-      v-for="(project, index) in projects"
-      v-bind:key="index"
-      :project="project"
-    />
-      </div>
+        v-for="(project, index) in projects"
+        v-bind:key="index"
+        :project="project"
+        />
+    </div> 
+    <div class="arrows">
+        <span>Prev</span>
+        <span v-on:click="slideNext">Next</span>
     </div>
-</section>
+  </div>
+  </section>
 </template>
 
 <script>
@@ -51,11 +54,17 @@ export default {
           body:
             "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
           img: "https://picsum.photos/seed/picsum/1000"
-        },
+        }
       ],
     };
   },
-};
+  methods: {
+    slideNext: () => {
+      console.log(10);
+    }
+  }
+}
+
 </script>
 
 <style lang="scss" scoped>
@@ -68,41 +77,32 @@ export default {
 }
 
 section {
-  //Position
   display: flex;
   align-items: center;
-  justify-content: center;
-  //Size
+  width: 100vw;
   height: 100vh;
-  overflow: hidden;
   position: relative;
 }
 
-h1 {
-  @include heading-large;
+.right-content {
   position: absolute;
-}
-
-.projects-wrapper {
-    //Size
-    width: 90vh;
-    height: 100vw;
-    display: flex;
-
-    transform: rotate(-90deg);
-    overflow-y: scroll;
-    flex-direction: column;
-    border: 1px solid black;
+  left: 50%;
 }
 
 .projects {
-  margin: 1000px auto;
-  align-items: center;
+  display: flex;
 }
 
-/* make scrollbar transparent */
-::-webkit-scrollbar {
-    width: 0px;
-    background: transparent;
+.arrows {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 0;
+  width: 100px;
+
 }
+
+::-webkit-scrollbar {
+    display: none;
+}
+
 </style>

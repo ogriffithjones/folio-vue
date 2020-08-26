@@ -24,37 +24,32 @@ export default {
 
 .project {
   //Size
-  width: 400px;
+  min-width: 350px;
+
+  //Position
+  align-self: flex-start;
+
   //Spacing
-  padding: 0 30px;
-  border-right: solid 1px $seccondary-sun_burn;
-  transform: rotate(90deg);
+  margin: 0 10px;
+  padding: 0 0 0 30px;
+  border-left: 1px solid $seccondary-sun_burn;
 }
 
 h1 {
-  //Font
-@include heading-sub;
-  //Spacing
-  padding-bottom: 20px;
-  //Color
+  @include heading-sub;
   color: $seccondary-sun_burn;
+  padding: 0 0 10px 0;
 }
 
 p {
-  //Color
-  color: $seccondary-sun_burn;
-  //Font
   @include paragraph-small;
-  //Spacing
-  padding-bottom: 20px;
-  
+  color: $seccondary-sun_burn;
+  padding: 0 0 10px 0;
 }
 
 img {
-  //Size
   width: 100%;
-  height: 400px;
-  //Scaling
+  height: 250px;
   object-fit: cover;
 }
 
