@@ -9,7 +9,7 @@
         />
     </div> 
     <div class="arrows">
-        <span>Prev</span>
+        <span v-on:click=" slidePrev">Prev</span>
         <span v-on:click="slideNext">Next</span>
     </div>
   </div>
@@ -17,6 +17,8 @@
 </template>
 
 <script>
+//AnimeJS
+import anime from 'animejs/lib/anime.es.js';
 import projectCard from "./project.component";
 
 export default {
@@ -26,6 +28,7 @@ export default {
   },
   data: function() {
     return {
+      pos: 0,
       projects: [
         {
           id: 1,
@@ -59,8 +62,23 @@ export default {
     };
   },
   methods: {
+    slidePrev: () => {
+      anime({
+        targets: ".projects",
+        translateX: 350,
+        duration: 700,
+        easing: 'spring(.5, 100, 80, 0)'
+      })
+     
+    },
     slideNext: () => {
-      console.log(10);
+      anime({
+        targets: ".projects",
+        translateX: -350,
+        duration: 700,
+        easing: 'spring(.5, 100, 80, 0)'
+      })
+      
     }
   }
 }
@@ -91,6 +109,7 @@ section {
 
 .projects {
   display: flex;
+  margin-right: 200px;
 }
 
 .arrows {
