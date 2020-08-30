@@ -22,17 +22,9 @@ export default {
   box-sizing: border-box;
 }
 
+// MOBILE
 .project {
-  //Size
-  min-width: 350px;
-
-  //Position
-  align-self: flex-start;
-
-  //Spacing
-  margin: 0 10px;
-  padding: 0 0 0 30px;
-  border-left: 1px solid $seccondary-sun_burn;
+  margin: 0 20px;
 }
 
 h1 {
@@ -53,4 +45,12 @@ img {
   object-fit: cover;
 }
 
+// DESKTOP
+
+@media (min-width: 800px) {
+
+  .project {
+    min-width: 350px;
+  }
+}
 </style>
