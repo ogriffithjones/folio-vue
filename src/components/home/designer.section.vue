@@ -2,13 +2,12 @@
   <section>
     <h1>Oliver Griffith-Jones</h1>
     <div class="right-content">
-      <div class="projects">
-        <ProjectCard
-          v-for="(project, index) in projects"
-          v-bind:key="index"
-          :project="project"
-        />
+      <div class="projects-wrapper">
+        <div class="projects">
+          <ProjectCard v-for="(project, index) in projects" v-bind:key="index" :project="project" />
+        </div>
       </div>
+
       <div class="arrows">
         <span v-on:click="slidePrev">Prev</span>
         <span v-on:click="slideNext">Next</span>
@@ -25,7 +24,7 @@ import projectCard from "./project.component";
 export default {
   name: "Designer-Section",
   components: {
-    ProjectCard: projectCard,
+    ProjectCard: projectCard
   },
   data() {
     return {
@@ -34,61 +33,61 @@ export default {
       projects: [
         {
           id: 1,
-          title: "Project title",
+          title: "Black Estate Site Redesign concept",
           body:
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-          img: "https://picsum.photos/seed/picsum/1000",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus magna nisl quis sem sed turpis. Massa eget nulla bibendum amet placerat ultrices pretium, libero. Varius gravida pellentesque netus magna. Tellus orci vulputate vel diam sit lacus facilisi. Pretium massa lorem sit adipiscing magna id sem. Montes, tincidunt molestie eleifend et venenatis. Pellentesque neque, tempor nulla ac a. Morbi facilisis dictumst tristique magna scelerisque vivamus dictum hendrerit. Porta sed leo rhoncus, cras lectus habitant sagittis sapien pulvinar. Id mauris volutpat sed cras lorem viverra. Ornare justo malesuada congue viverra tellus nunc cras neque odio. Aliquam aliquam nunc nibh eget. Enim elementum, eget nulla interdum ullamcorper blandit augue eget.",
+          img: "https://picsum.photos/seed/picsum/1000"
         },
         {
           id: 2,
-          title: "Project title",
+          title: "Black Estate Site Redesign concept",
           body:
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-          img: "https://picsum.photos/seed/picsum/1000",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus magna nisl quis sem sed turpis. Massa eget nulla bibendum amet placerat ultrices pretium, libero. Varius gravida pellentesque netus magna. Tellus orci vulputate vel diam sit lacus facilisi. Pretium massa lorem sit adipiscing magna id sem. Montes, tincidunt molestie eleifend et venenatis. Pellentesque neque, tempor nulla ac a. Morbi facilisis dictumst tristique magna scelerisque vivamus dictum hendrerit. Porta sed leo rhoncus, cras lectus habitant sagittis sapien pulvinar. Id mauris volutpat sed cras lorem viverra. Ornare justo malesuada congue viverra tellus nunc cras neque odio. Aliquam aliquam nunc nibh eget. Enim elementum, eget nulla interdum ullamcorper blandit augue eget.",
+          img: "https://picsum.photos/seed/picsum/1000"
         },
         {
           id: 3,
-          title: "Project title",
+          title: "Black Estate Site Redesign concept",
           body:
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-          img: "https://picsum.photos/seed/picsum/1000",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus magna nisl quis sem sed turpis. Massa eget nulla bibendum amet placerat ultrices pretium, libero. Varius gravida pellentesque netus magna. Tellus orci vulputate vel diam sit lacus facilisi. Pretium massa lorem sit adipiscing magna id sem. Montes, tincidunt molestie eleifend et venenatis. Pellentesque neque, tempor nulla ac a. Morbi facilisis dictumst tristique magna scelerisque vivamus dictum hendrerit. Porta sed leo rhoncus, cras lectus habitant sagittis sapien pulvinar. Id mauris volutpat sed cras lorem viverra. Ornare justo malesuada congue viverra tellus nunc cras neque odio. Aliquam aliquam nunc nibh eget. Enim elementum, eget nulla interdum ullamcorper blandit augue eget.",
+          img: "https://picsum.photos/seed/picsum/1000"
         },
         {
           id: 4,
-          title: "Project title",
+          title: "Black Estate Site Redesign concept",
           body:
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-          img: "https://picsum.photos/seed/picsum/1000",
-        },
-      ],
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus magna nisl quis sem sed turpis. Massa eget nulla bibendum amet placerat ultrices pretium, libero. Varius gravida pellentesque netus magna. Tellus orci vulputate vel diam sit lacus facilisi. Pretium massa lorem sit adipiscing magna id sem. Montes, tincidunt molestie eleifend et venenatis. Pellentesque neque, tempor nulla ac a. Morbi facilisis dictumst tristique magna scelerisque vivamus dictum hendrerit. Porta sed leo rhoncus, cras lectus habitant sagittis sapien pulvinar. Id mauris volutpat sed cras lorem viverra. Ornare justo malesuada congue viverra tellus nunc cras neque odio. Aliquam aliquam nunc nibh eget. Enim elementum, eget nulla interdum ullamcorper blandit augue eget.",
+          img: "https://picsum.photos/seed/picsum/1000"
+        }
+      ]
     };
   },
   methods: {
     slidePrev() {
       if (this.posCounter > 0) {
         this.posCounter -= 1;
-        this.pos += 390;
+        this.pos += 590;
       }
       anime({
         targets: ".projects",
         translateX: this.pos,
         duration: 700,
-        easing: "spring(.5, 100, 80, 0)",
+        easing: "spring(.5, 100, 80, 0)"
       });
     },
     slideNext() {
       if (this.posCounter < this.projects.length - 1) {
         this.posCounter += 1;
-        this.pos -= 390;
+        this.pos -= 590;
       }
       anime({
         targets: ".projects",
         translateX: this.pos,
         duration: 700,
-        easing: "spring(.5, 100, 80, 0)",
+        easing: "spring(.5, 100, 80, 0)"
       });
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -102,6 +101,10 @@ export default {
 }
 
 // MOBILE
+
+.projects {
+  transform: unset;
+}
 
 h1 {
   border-bottom: 1px solid $seccondary-sun_burn;
@@ -117,26 +120,48 @@ h1 {
 
 // DESKTOP
 
-@media (min-width: 800px) {
+@media (max-width: 1100px) {
 
-  section  {
-    height: 100%;
+}
+
+@media (min-width: 800px) {
+  section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
   }
 
   h1 {
     border: none;
+    width: 50vw;
+    margin: 0 1em;
+    @include heading-large;
+    color: $seccondary-sun_burn;
+  }
+
+  .right-content {
+    width: 50vw;
+    height: 100%;
+    
+  }
+
+  .projects-wrapper {
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+    border-left: 1px solid $seccondary-sun_burn;
+    margin-bottom: 20px;
+    height: 90%;
   }
 
   .projects {
     display: flex;
-    margin: auto;
-    align-self: center;
-    margin-left: 50%;
+    width: 100%;
   }
-
 
   .arrows {
     display: block;
+    margin-left: 20px;
   }
 }
 </style>

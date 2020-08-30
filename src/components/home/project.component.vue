@@ -1,16 +1,16 @@
 <template>
   <div class="project">
-      <h1>{{project.title}}</h1>
-      <p>{{project.body}}</p>
-      <img v-bind:src="project.img" alt="">
+    <h1>{{project.title}}</h1>
+    <p>{{project.body}}</p>
+    <img v-bind:src="project.img" alt />
   </div>
 </template>
 
 <script>
 export default {
-    name: 'Project-Component',
-    props: ['project']
-}
+  name: "Project-Component",
+  props: ["project"]
+};
 </script>
 
 <style lang="scss" scoped>
@@ -25,32 +25,36 @@ export default {
 // MOBILE
 .project {
   margin: 0 20px;
+  height: 100%;
 }
 
 h1 {
   @include heading-sub;
   color: $seccondary-sun_burn;
-  padding: 0 0 10px 0;
+  padding: 0 0 20px 0;
 }
 
 p {
-  @include paragraph-small;
+  @include paragraph-main;
   color: $seccondary-sun_burn;
-  padding: 0 0 10px 0;
+  padding: 0 0 20px 0;
 }
 
 img {
   width: 100%;
-  height: 250px;
+  height: 400px;
   object-fit: cover;
 }
 
 // DESKTOP
 
 @media (min-width: 800px) {
-
   .project {
-    min-width: 350px;
+    min-width: 550px;
+  }
+
+  p {
+      line-height: 1.4em;
   }
 }
 </style>
