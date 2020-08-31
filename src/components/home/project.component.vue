@@ -1,7 +1,7 @@
 <template>
   <div class="project">
-    <h1>{{project.title}}</h1>
-    <p>{{project.body}}</p>
+    <h1>{{ project.title }}</h1>
+    <p>{{ project.body }}</p>
     <img v-bind:src="project.img" alt />
   </div>
 </template>
@@ -9,7 +9,7 @@
 <script>
 export default {
   name: "Project-Component",
-  props: ["project"]
+  props: ["project"],
 };
 </script>
 
@@ -22,39 +22,39 @@ export default {
   box-sizing: border-box;
 }
 
-// MOBILE
+// DESKTOP
+
 .project {
-  margin: 0 20px;
-  height: 100%;
+  min-width: 340px;
 }
 
 h1 {
-  @include heading-sub;
-  color: $seccondary-sun_burn;
-  padding: 0 0 20px 0;
-}
-
-p {
-  @include paragraph-main;
-  color: $seccondary-sun_burn;
-  padding: 0 0 20px 0;
-}
-
-img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-}
-
-// DESKTOP
-
-@media (min-width: 800px) {
-  .project {
-    min-width: 550px;
+    @include heading-sub;
+    color: $seccondary-sun_burn;
+    font-size: 2em;
+    padding: 0 0 20px 0;
+    line-height: 1.2em;
   }
 
-  p {
-      line-height: 1.4em;
+p {
+    @include paragraph-small;
+    font-size: 0.7em;
+    color: $seccondary-sun_burn;
+    padding: 0 0 20px 0;
+    line-height: 1.5em;
+  }
+
+img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+
+  // MOBILE
+@media (max-width: 800px) {
+  .project {
+    min-width: 100vw;
+    padding:  10px;
   }
 }
 </style>
