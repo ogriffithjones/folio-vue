@@ -1,18 +1,21 @@
 <template>
   <!-- <HeroSection></HeroSection> -->
-  <DesignerSection></DesignerSection>
+  <!-- <DesignerSection></DesignerSection> -->
+  <AdminProjects></AdminProjects>
 </template>
 
 <script>
-import designerSection from "./designer.section";
+// import designerSection from "./designer.section";
 // import heroSection from "./hero.section";
+import adminProjects from "../admin/admin.projects";
 
 export default {
-  name: "Designer-Section",
+  // name: "Designer-Section",
   // name: "Hero-Section",
   components: {
-    DesignerSection: designerSection,
+    // DesignerSection: designerSection,
     // HeroSection: heroSection,
+    AdminProjects: adminProjects
   },
 };
 </script>
