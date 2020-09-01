@@ -198,14 +198,14 @@ h1 {
   .arrows {
     display: flex;
     justify-content: space-between;
-    align-self: flex-start;
     width: 80px;
+    align-self: flex-start;
     & img {
       height: 30px;
     }
     &__prev {
-      transform: rotate(180deg);
-    }
+        transform: rotate(180deg);
+      }
   }
   //Hide scrollbar for projects
   ::-webkit-scrollbar {
