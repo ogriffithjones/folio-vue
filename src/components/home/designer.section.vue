@@ -5,15 +5,13 @@
     </div>
     <div class="right-col">
       <div class="projects">
-        <ProjectCard
-          v-for="(project, index) in projects"
-          v-bind:key="index"
-          :project="project"
-        />
+        <ProjectCard v-for="(project, index) in projects" v-bind:key="index" :project="project" />
       </div>
       <div class="arrows">
-        <span v-on:click="slidePrev">Prev</span>
-        <span v-on:click="slideNext">Next</span>
+        <img class="arrows__prev" v-on:click="slidePrev" v-bind:src="arrows" alt />
+        <img v-on:click="slideNext" v-bind:src="arrows" alt />
+        <!-- <span v-on:click="slidePrev">Prev</span>
+        <span v-on:click="slideNext">Next</span> -->
       </div>
     </div>
   </section>
@@ -27,7 +25,7 @@ import projectCard from "./project.component";
 export default {
   name: "Designer-Section",
   components: {
-    ProjectCard: projectCard,
+    ProjectCard: projectCard
   },
   data() {
     return {
@@ -38,38 +36,34 @@ export default {
           id: 1,
           title: "Black Estate Site Redesign concept",
           body:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus magna nisl quis sem sed turpis. Massa eget nulla bibendum amet placerat ultrices pretium, libero. Varius gravida pellentesque netus magna. Tellus orci vulputate vel diam sit lacus facilisi. Pretium massa lorem sit adipiscing magna id sem. Montes, tincidunt molestie eleifend et venenatis. Pellentesque neque, tempor nulla ac a. Morbi facilisis dictumst tristique magna scelerisque vivamus dictum hendrerit.",
-          img: "https://picsum.photos/seed/picsum/1000",
-        },
-        {
-          id: 2,
-          title: "Black Estate Site Redesign concept",
-          body:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus magna nisl quis sem sed turpis. Massa eget nulla bibendum amet placerat ultrices pretium, libero. Varius gravida pellentesque netus magna. Tellus orci vulputate vel diam sit lacus facilisi. Pretium massa lorem sit adipiscing magna id sem. Montes, tincidunt molestie eleifend et venenatis. Pellentesque neque, tempor nulla ac a. Morbi facilisis dictumst tristique magna scelerisque vivamus dictum hendrerit.",
-          img: "https://picsum.photos/seed/picsum/1000",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus magna nisl quis sem sed turpis. Massa eget nulla bibendum amet placerat ultrices pretium, libero. Varius gravida pellentesque netus magna. Tellus orci vulputate vel diam sit lacus facilisi. Pretium massa lorem sit adipiscing magna id sem. Montes, tincidunt molestie eleifend et venenatis. Pellentesque neque, tempor nulla ac a. Morbi facilisis dictumst tristique magna scelerisque vivamus dictum hendrerit."
         },
         {
           id: 3,
           title: "Black Estate Site Redesign concept",
           body:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus magna nisl quis sem sed turpis. Massa eget nulla bibendum amet placerat ultrices pretium, libero. Varius gravida pellentesque netus magna. Tellus orci vulputate vel diam sit lacus facilisi. Pretium massa lorem sit adipiscing magna id sem. Montes, tincidunt molestie eleifend et venenatis. Pellentesque neque, tempor nulla ac a. Morbi facilisis dictumst tristique magna scelerisque vivamus dictum hendrerit.",
-          img: "https://picsum.photos/seed/picsum/1000",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus magna nisl quis sem sed turpis. Massa eget nulla bibendum amet placerat ultrices pretium, libero. Varius gravida pellentesque netus magna. Tellus orci vulputate vel diam sit lacus facilisi. Pretium massa lorem sit adipiscing magna id sem. Montes, tincidunt molestie eleifend et venenatis. Pellentesque neque, tempor nulla ac a. Morbi facilisis dictumst tristique magna scelerisque vivamus dictum hendrerit."
+        },
+        {
+          id: 3,
+          title: "Black Estate Site Redesign concept",
+          body:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus magna nisl quis sem sed turpis. Massa eget nulla bibendum amet placerat ultrices pretium, libero. Varius gravida pellentesque netus magna. Tellus orci vulputate vel diam sit lacus facilisi. Pretium massa lorem sit adipiscing magna id sem. Montes, tincidunt molestie eleifend et venenatis. Pellentesque neque, tempor nulla ac a. Morbi facilisis dictumst tristique magna scelerisque vivamus dictum hendrerit."
         },
         {
           id: 4,
           title: "Black Estate Site Redesign concept",
           body:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus magna nisl quis sem sed turpis. Massa eget nulla bibendum amet placerat ultrices pretium, libero. Varius gravida pellentesque netus magna. Tellus orci vulputate vel diam sit lacus facilisi. Pretium massa lorem sit adipiscing magna id sem. Montes, tincidunt molestie eleifend et venenatis. Pellentesque neque, tempor nulla ac a. Morbi facilisis dictumst tristique magna scelerisque vivamus dictum hendrerit.",
-          img: "https://picsum.photos/seed/picsum/1000",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus magna nisl quis sem sed turpis. Massa eget nulla bibendum amet placerat ultrices pretium, libero. Varius gravida pellentesque netus magna. Tellus orci vulputate vel diam sit lacus facilisi. Pretium massa lorem sit adipiscing magna id sem. Montes, tincidunt molestie eleifend et venenatis. Pellentesque neque, tempor nulla ac a. Morbi facilisis dictumst tristique magna scelerisque vivamus dictum hendrerit."
         },
         {
           id: 5,
           title: "Black Estate Site Redesign concept",
           body:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus magna nisl quis sem sed turpis. Massa eget nulla bibendum amet placerat ultrices pretium, libero. Varius gravida pellentesque netus magna. Tellus orci vulputate vel diam sit lacus facilisi. Pretium massa lorem sit adipiscing magna id sem. Montes, tincidunt molestie eleifend et venenatis. Pellentesque neque, tempor nulla ac a. Morbi facilisis dictumst tristique magna scelerisque vivamus dictum hendrerit.",
-          img: "https://picsum.photos/seed/picsum/1000",
-        },
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus magna nisl quis sem sed turpis. Massa eget nulla bibendum amet placerat ultrices pretium, libero. Varius gravida pellentesque netus magna. Tellus orci vulputate vel diam sit lacus facilisi. Pretium massa lorem sit adipiscing magna id sem. Montes, tincidunt molestie eleifend et venenatis. Pellentesque neque, tempor nulla ac a. Morbi facilisis dictumst tristique magna scelerisque vivamus dictum hendrerit."
+        }
       ],
+      arrows: require("../../assets/arrow_icon.png")
     };
   },
   methods: {
@@ -81,7 +75,7 @@ export default {
           targets: ".project",
           translateX: this.pos,
           duration: 700,
-          easing: "spring(.5, 100, 80, 0)",
+          easing: "spring(.5, 100, 80, 0)"
         });
       }
     },
@@ -93,11 +87,11 @@ export default {
           targets: ".project",
           translateX: this.pos,
           duration: 700,
-          easing: "spring(.5, 100, 80, 0)",
+          easing: "spring(.5, 100, 80, 0)"
         });
       }
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -202,8 +196,16 @@ h1 {
 
   // Manual scroll
   .arrows {
+    display: flex;
+    justify-content: space-between;
     align-self: flex-start;
-    display: block;
+    width: 80px;
+    & img {
+      height: 30px;
+    }
+    &__prev {
+      transform: rotate(180deg);
+    }
   }
   //Hide scrollbar for projects
   ::-webkit-scrollbar {

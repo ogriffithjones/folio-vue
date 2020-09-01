@@ -2,7 +2,7 @@
   <div class="project">
     <h1>{{ project.title }}</h1>
     <p>{{ project.body }}</p>
-    <img v-bind:src="project.img" alt />
+    <img v-bind:src="thumbnail" alt />
   </div>
 </template>
 
@@ -10,6 +10,11 @@
 export default {
   name: "Project-Component",
   props: ["project"],
+  data: function() {
+    return {
+      thumbnail: require("../../assets/thumbnail.jpg")
+    };
+  }
 };
 </script>
 
@@ -53,7 +58,7 @@ img {
   padding-bottom: 1em;
 }
 
-//Desktop 
+//Desktop
 @media (min-width: 900px) {
   .project {
     min-width: 350px;
