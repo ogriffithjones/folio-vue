@@ -86,7 +86,7 @@ export default {
       }
     },
     slideNext() {
-      if (this.posCounter < this.projects.length - 2) {
+      if (this.posCounter < this.projects.length - 1) {
         this.posCounter += 1;
         this.pos -= 355;
         anime({
