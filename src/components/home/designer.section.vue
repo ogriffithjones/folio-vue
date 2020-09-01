@@ -1,6 +1,9 @@
 <template>
   <section>
-    <div class="projects-wrapper">
+    <div class="left-col">
+      <h1>Oliver Griffith -Jones</h1>
+    </div>
+    <div class="right-col">
       <div class="projects">
         <ProjectCard
           v-for="(project, index) in projects"
@@ -8,10 +11,10 @@
           :project="project"
         />
       </div>
-    </div>
-    <div class="arrows">
-      <span v-on:click="slidePrev">Prev</span>
-      <span v-on:click="slideNext">Next</span>
+      <div class="arrows">
+        <span v-on:click="slidePrev">Prev</span>
+        <span v-on:click="slideNext">Next</span>
+      </div>
     </div>
   </section>
 </template>
@@ -35,35 +38,35 @@ export default {
           id: 1,
           title: "Black Estate Site Redesign concept",
           body:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus magna nisl quis sem sed turpis. Massa eget nulla bibendum amet placerat ultrices pretium, libero. Varius gravida pellentesque netus magna. Tellus orci vulputate vel diam sit lacus facilisi. Pretium massa lorem sit adipiscing magna id sem. Montes, tincidunt molestie eleifend et venenatis. Pellentesque neque, tempor nulla ac a. Morbi facilisis dictumst tristique magna scelerisque vivamus dictum hendrerit. Porta sed leo rhoncus, cras lectus habitant sagittis sapien pulvinar. Id mauris volutpat sed cras lorem viverra.",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus magna nisl quis sem sed turpis. Massa eget nulla bibendum amet placerat ultrices pretium, libero. Varius gravida pellentesque netus magna. Tellus orci vulputate vel diam sit lacus facilisi. Pretium massa lorem sit adipiscing magna id sem. Montes, tincidunt molestie eleifend et venenatis. Pellentesque neque, tempor nulla ac a. Morbi facilisis dictumst tristique magna scelerisque vivamus dictum hendrerit.",
           img: "https://picsum.photos/seed/picsum/1000",
         },
         {
           id: 2,
           title: "Black Estate Site Redesign concept",
           body:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus magna nisl quis sem sed turpis. Massa eget nulla bibendum amet placerat ultrices pretium, libero. Varius gravida pellentesque netus magna. Tellus orci vulputate vel diam sit lacus facilisi. Pretium massa lorem sit adipiscing magna id sem. Montes, tincidunt molestie eleifend et venenatis. Pellentesque neque, tempor nulla ac a. Morbi facilisis dictumst tristique magna scelerisque vivamus dictum hendrerit. Porta sed leo rhoncus, cras lectus habitant sagittis sapien pulvinar. Id mauris volutpat sed cras lorem viverra.",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus magna nisl quis sem sed turpis. Massa eget nulla bibendum amet placerat ultrices pretium, libero. Varius gravida pellentesque netus magna. Tellus orci vulputate vel diam sit lacus facilisi. Pretium massa lorem sit adipiscing magna id sem. Montes, tincidunt molestie eleifend et venenatis. Pellentesque neque, tempor nulla ac a. Morbi facilisis dictumst tristique magna scelerisque vivamus dictum hendrerit.",
           img: "https://picsum.photos/seed/picsum/1000",
         },
         {
           id: 3,
           title: "Black Estate Site Redesign concept",
           body:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus magna nisl quis sem sed turpis. Massa eget nulla bibendum amet placerat ultrices pretium, libero. Varius gravida pellentesque netus magna. Tellus orci vulputate vel diam sit lacus facilisi. Pretium massa lorem sit adipiscing magna id sem. Montes, tincidunt molestie eleifend et venenatis. Pellentesque neque, tempor nulla ac a. Morbi facilisis dictumst tristique magna scelerisque vivamus dictum hendrerit. Porta sed leo rhoncus, cras lectus habitant sagittis sapien pulvinar. Id mauris volutpat sed cras lorem viverra.",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus magna nisl quis sem sed turpis. Massa eget nulla bibendum amet placerat ultrices pretium, libero. Varius gravida pellentesque netus magna. Tellus orci vulputate vel diam sit lacus facilisi. Pretium massa lorem sit adipiscing magna id sem. Montes, tincidunt molestie eleifend et venenatis. Pellentesque neque, tempor nulla ac a. Morbi facilisis dictumst tristique magna scelerisque vivamus dictum hendrerit.",
           img: "https://picsum.photos/seed/picsum/1000",
         },
         {
           id: 4,
           title: "Black Estate Site Redesign concept",
           body:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus magna nisl quis sem sed turpis. Massa eget nulla bibendum amet placerat ultrices pretium, libero. Varius gravida pellentesque netus magna. Tellus orci vulputate vel diam sit lacus facilisi. Pretium massa lorem sit adipiscing magna id sem. Montes, tincidunt molestie eleifend et venenatis. Pellentesque neque, tempor nulla ac a. Morbi facilisis dictumst tristique magna scelerisque vivamus dictum hendrerit. Porta sed leo rhoncus, cras lectus habitant sagittis sapien pulvinar. Id mauris volutpat sed cras lorem viverra.",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus magna nisl quis sem sed turpis. Massa eget nulla bibendum amet placerat ultrices pretium, libero. Varius gravida pellentesque netus magna. Tellus orci vulputate vel diam sit lacus facilisi. Pretium massa lorem sit adipiscing magna id sem. Montes, tincidunt molestie eleifend et venenatis. Pellentesque neque, tempor nulla ac a. Morbi facilisis dictumst tristique magna scelerisque vivamus dictum hendrerit.",
           img: "https://picsum.photos/seed/picsum/1000",
         },
         {
           id: 5,
           title: "Black Estate Site Redesign concept",
           body:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus magna nisl quis sem sed turpis. Massa eget nulla bibendum amet placerat ultrices pretium, libero. Varius gravida pellentesque netus magna. Tellus orci vulputate vel diam sit lacus facilisi. Pretium massa lorem sit adipiscing magna id sem. Montes, tincidunt molestie eleifend et venenatis. Pellentesque neque, tempor nulla ac a. Morbi facilisis dictumst tristique magna scelerisque vivamus dictum hendrerit. Porta sed leo rhoncus, cras lectus habitant sagittis sapien pulvinar. Id mauris volutpat sed cras lorem viverra.",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus magna nisl quis sem sed turpis. Massa eget nulla bibendum amet placerat ultrices pretium, libero. Varius gravida pellentesque netus magna. Tellus orci vulputate vel diam sit lacus facilisi. Pretium massa lorem sit adipiscing magna id sem. Montes, tincidunt molestie eleifend et venenatis. Pellentesque neque, tempor nulla ac a. Morbi facilisis dictumst tristique magna scelerisque vivamus dictum hendrerit.",
           img: "https://picsum.photos/seed/picsum/1000",
         },
       ],
@@ -71,38 +74,28 @@ export default {
   },
   methods: {
     slidePrev() {
-      let w = window.innerWidth;
-      if (w <= 800 && this.posCounter > 0) {
+      if (this.posCounter > 0) {
         this.posCounter -= 1;
-        this.pos += w;
-
-      } else if (w >= 800 && this.posCounter > 0) {
-        this.posCounter -= 1;
-        this.pos += 350;
+        this.pos += 355;
+        anime({
+          targets: ".project",
+          translateX: this.pos,
+          duration: 700,
+          easing: "spring(.5, 100, 80, 0)",
+        });
       }
-      anime({
-        targets: ".project",
-        translateX: this.pos,
-        duration: 700,
-        easing: "spring(.5, 100, 80, 0)",
-      });
     },
     slideNext() {
-      let w = window.innerWidth;
-      if (w <= 800 && this.posCounter < (this.projects.length - 2)) {
+      if (this.posCounter < this.projects.length - 2) {
         this.posCounter += 1;
-        this.pos -= w;
-
-      } else if (w >= 800 && this.posCounter < (this.projects.length - 2)) {
-        this.posCounter += 1;
-        this.pos -= 350;
+        this.pos -= 355;
+        anime({
+          targets: ".project",
+          translateX: this.pos,
+          duration: 700,
+          easing: "spring(.5, 100, 80, 0)",
+        });
       }
-      anime({
-        targets: ".project",
-        translateX: this.pos,
-        duration: 700,
-        easing: "spring(.5, 100, 80, 0)",
-      });
     },
   },
 };
@@ -117,59 +110,104 @@ export default {
   box-sizing: border-box;
 }
 
-// DESKTOP
+// MOBILE SCREEN
 
 section {
-  display: flex;
   flex-direction: column;
-  height: 100vh;
-  justify-content: center;
-  align-items: flex-end;
 }
 
-.projects-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  width: 50vw;
-  overflow-x: scroll;
-  border-left: 1px solid red;
+h1 {
+  @include heading-sub;
+  //Font
+  font-size: 6em;
+  font-weight: 800;
+  line-height: 1.2em;
+  color: $seccondary-sun_burn;
+  //Spacing
   margin-bottom: 20px;
+  padding: 1em 0;
+  border-bottom: 1px solid $seccondary-sun_burn;
+}
+
+.right-col {
+  //Set projects column to width of viewport on mobile
+  width: 100vw;
 }
 
 .projects {
-  display: flex;
+  flex-direction: column;
+  //Size
   width: 100%;
 }
 
 .arrows {
-  align-self: flex-start;
-  margin-left: 50%;
+  //Hide arrow buttons on mobile
+  display: none;
 }
- ::-webkit-scrollbar {
-    display: none;
-  }
 
-  // MOBILE
-@media (max-width: 800px) {
-
-
+// DESKTOP SCREEN
+@media (min-width: 900px) {
   section {
-    justify-content: flex-start;
+    //Layout
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    //Size
+    height: 100vh;
     width: 100vw;
+    //Freeze vertical scrolling
+    overflow-y: hidden;
   }
 
-  .projects-wrapper {
-    width: 100vw;
+  .right-col {
+    //Layout
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    //Size
+    height: 90vh;
+    flex: 2 1 50%;
+    min-width: 50%;
+  }
+
+  .left-col {
+    display: flex;
+    justify-content: center;
+  }
+
+  h1 {
+    //Font
+    @include heading-large;
+    color: $seccondary-sun_burn;
+    font-size: 7em;
+    line-height: 1.3em;
+    //Size and Spacing
+    border: none;
+    margin-bottom: 0;
+    margin: 0 0.5em;
   }
 
   .projects {
-    transform: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    border-left: 1px solid red;
+    margin-bottom: 20px;
+    width: 100%;
+    padding-left: 20px;
   }
 
-  // .arrows {
-  //   display: none;
-  // }
+  // Manual scroll
+  .arrows {
+    align-self: flex-start;
+    display: block;
+  }
+  //Hide scrollbar for projects
+  ::-webkit-scrollbar {
+    display: none;
+  }
 }
 </style>
