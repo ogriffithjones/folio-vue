@@ -5,7 +5,7 @@
     </div>
     <div class="right-col">
       <div class="projects">
-        <ProjectCard v-for="(project, index) in projects" v-bind:key="index" :project="project" />
+        <ProjectCard class="project" v-for="(project, index) in projects" v-bind:key="index" :project="project" />
       </div>
       <div class="arrows">
         <img class="arrows__prev" v-on:click="slidePrev" v-bind:src="arrows" alt />
@@ -134,6 +134,11 @@ h1 {
   width: 100%;
 }
 
+.project {
+  width: 100%;
+  padding: 20px 20px 0 20px;
+}
+
 .arrows {
   //Hide arrow buttons on mobile
   display: none;
@@ -192,6 +197,10 @@ h1 {
     margin-bottom: 20px;
     width: 100%;
     padding-left: 20px;
+  }
+
+  .project {
+    min-width: 350px;
   }
 
   // Manual scroll
