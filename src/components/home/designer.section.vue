@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="left-col">
-      <h1>Oliver Griffith -Jones</h1>
+      <h1>{{author}}</h1>
     </div>
     <div class="right-col">
       <div class="projects">
@@ -27,6 +27,7 @@ export default {
   components: {
     ProjectCard: projectCard
   },
+  props: ["author"],
   data() {
     return {
       pos: 0,
