@@ -1,5 +1,5 @@
 <template>
-  <div class="project">
+  <div>
     <h1>{{ project.title }}</h1>
     <p>{{ project.body }}</p>
     <img v-bind:src="thumbnail" alt />
@@ -29,11 +29,6 @@ export default {
 
 // MOBILE
 
-.project {
-  width: 100%;
-  padding: 20px 20px 0 20px;
-}
-
 h1 {
   @include heading-sub;
   color: $seccondary-sun_burn;
@@ -60,9 +55,6 @@ img {
 
 //Desktop
 @media (min-width: 900px) {
-  .project {
-    min-width: 350px;
-  }
   h1 {
     line-height: 1.1em;
   }
