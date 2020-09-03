@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h1>Projects</h1>
     <ul>
       <li v-for="(project,index) in projects" v-bind:key="index">
         <router-link
@@ -21,25 +20,25 @@ export default {
     };
   },
   methods: {
-    // getProjects: function() {
-    //   this.$http
-    //     .get(`${process.env.VUE_APP_API_URL}projects`)
-    //     .then(function(data) {
-    //       this.projects = data.body;
-    //     });
-    // },
-    // deleteProject: function(projectId) {
-    //   this.$http.delete(
-    //     `${process.env.VUE_APP_API_URL}projects/${projectId}`.then(function() {
-    //       this.getProjects();
-    //     })
-    //   );
-    // }
+    getProjects: function() {
+      this.$http
+        .get(`${process.env.VUE_APP_API_URL}projects`)
+        .then(function(data) {
+          this.projects = data.body;
+        });
+    },
+    deleteProject: function(projectId) {
+      this.$http.delete(
+        `${process.env.VUE_APP_API_URL}projects/${projectId}`.then(function() {
+          this.getProjects();
+        })
+      );
+    }
   },
 
-  // created: function() {
-  //   this.getProjects();
-  // }
+  created: function() {
+    this.getProjects();
+  }
 };
 </script>
 
