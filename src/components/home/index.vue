@@ -1,22 +1,26 @@
 <template>
   <!-- <HeroSection></HeroSection> -->
-  <!-- <DesignerSection></DesignerSection> -->
-  <AdminProjects></AdminProjects>
+  <div>
+    <DesignerSection v-for="(author,index) in authors" v-bind:key="index" :author="author" />
+  </div>
 </template>
 
 <script>
-// import designerSection from "./designer.section";
+import designerSection from "./designer.section";
 // import heroSection from "./hero.section";
-import adminProjects from "../admin/admin.projects";
 
 export default {
-  // name: "Designer-Section",
+  name: "Designer-Section",
   // name: "Hero-Section",
   components: {
-    // DesignerSection: designerSection,
+    DesignerSection: designerSection
     // HeroSection: heroSection,
-    AdminProjects: adminProjects
   },
+  data: function() {
+    return {
+      authors: []
+    };
+  }
 };
 </script>
 

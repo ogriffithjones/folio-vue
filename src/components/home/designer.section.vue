@@ -1,11 +1,11 @@
 <template>
   <section>
     <div class="left-col">
-      <h1>Oliver Griffith -Jones</h1>
+      <h1>{{author}}</h1>
     </div>
     <div class="right-col">
       <div class="projects">
-        <ProjectCard class="project" v-for="(project, index) in projects" v-bind:key="index" :project="project" />
+        <ProjectCard v-for="(project, index) in projects" v-bind:key="index" :project="project" />
       </div>
       <div class="arrows">
         <img class="arrows__prev" v-on:click="slidePrev" v-bind:src="arrows" alt />
@@ -31,6 +31,7 @@ export default {
     return {
       pos: 0,
       posCounter: 0,
+      authors: [],
       projects: [
         {
           id: 1,
@@ -63,6 +64,7 @@ export default {
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus magna nisl quis sem sed turpis. Massa eget nulla bibendum amet placerat ultrices pretium, libero. Varius gravida pellentesque netus magna. Tellus orci vulputate vel diam sit lacus facilisi. Pretium massa lorem sit adipiscing magna id sem. Montes, tincidunt molestie eleifend et venenatis. Pellentesque neque, tempor nulla ac a. Morbi facilisis dictumst tristique magna scelerisque vivamus dictum hendrerit."
         }
       ],
+      props: ["author"],
       arrows: require("../../assets/arrow_icon.png")
     };
   },
@@ -134,11 +136,6 @@ h1 {
   width: 100%;
 }
 
-.project {
-  width: 100%;
-  padding: 20px 20px 0 20px;
-}
-
 .arrows {
   //Hide arrow buttons on mobile
   display: none;
@@ -197,10 +194,6 @@ h1 {
     margin-bottom: 20px;
     width: 100%;
     padding-left: 20px;
-  }
-
-  .project {
-    min-width: 350px;
   }
 
   // Manual scroll
