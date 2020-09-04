@@ -34,16 +34,7 @@ export default {
   },
   data: function() {
     return {
-<<<<<<< HEAD
-      authors: [
-        "Oliver Grithith -Jones",
-        "Himanshu Rajpal",
-        "Jesse Saunders",
-        "Chris Coulbeck"
-      ]
-=======
       authors: []
->>>>>>> admin
     };
   }
 };

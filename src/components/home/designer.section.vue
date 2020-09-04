@@ -5,7 +5,7 @@
     </div>
     <div class="right-col">
       <div class="projects">
-        <ProjectCard v-for="(project, index) in projects" v-bind:key="index" :project="project" />
+        <ProjectCard v-for="(project, index) in author.projects" v-bind:key="index" :project="project" />
       </div>
       <div class="arrows">
         <img class="arrows__prev" v-on:click="slidePrev" v-bind:src="arrows" alt />
@@ -32,39 +32,6 @@ export default {
     return {
       pos: 0,
       posCounter: 0,
-      authors: [],
-      projects: [
-        {
-          id: 1,
-          title: "Black Estate Site Redesign concept",
-          body:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus magna nisl quis sem sed turpis. Massa eget nulla bibendum amet placerat ultrices pretium, libero. Varius gravida pellentesque netus magna. Tellus orci vulputate vel diam sit lacus facilisi. Pretium massa lorem sit adipiscing magna id sem. Montes, tincidunt molestie eleifend et venenatis. Pellentesque neque, tempor nulla ac a. Morbi facilisis dictumst tristique magna scelerisque vivamus dictum hendrerit."
-        },
-        {
-          id: 3,
-          title: "Black Estate Site Redesign concept",
-          body:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus magna nisl quis sem sed turpis. Massa eget nulla bibendum amet placerat ultrices pretium, libero. Varius gravida pellentesque netus magna. Tellus orci vulputate vel diam sit lacus facilisi. Pretium massa lorem sit adipiscing magna id sem. Montes, tincidunt molestie eleifend et venenatis. Pellentesque neque, tempor nulla ac a. Morbi facilisis dictumst tristique magna scelerisque vivamus dictum hendrerit."
-        },
-        {
-          id: 3,
-          title: "Black Estate Site Redesign concept",
-          body:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus magna nisl quis sem sed turpis. Massa eget nulla bibendum amet placerat ultrices pretium, libero. Varius gravida pellentesque netus magna. Tellus orci vulputate vel diam sit lacus facilisi. Pretium massa lorem sit adipiscing magna id sem. Montes, tincidunt molestie eleifend et venenatis. Pellentesque neque, tempor nulla ac a. Morbi facilisis dictumst tristique magna scelerisque vivamus dictum hendrerit."
-        },
-        {
-          id: 4,
-          title: "Black Estate Site Redesign concept",
-          body:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus magna nisl quis sem sed turpis. Massa eget nulla bibendum amet placerat ultrices pretium, libero. Varius gravida pellentesque netus magna. Tellus orci vulputate vel diam sit lacus facilisi. Pretium massa lorem sit adipiscing magna id sem. Montes, tincidunt molestie eleifend et venenatis. Pellentesque neque, tempor nulla ac a. Morbi facilisis dictumst tristique magna scelerisque vivamus dictum hendrerit."
-        },
-        {
-          id: 5,
-          title: "Black Estate Site Redesign concept",
-          body:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus magna nisl quis sem sed turpis. Massa eget nulla bibendum amet placerat ultrices pretium, libero. Varius gravida pellentesque netus magna. Tellus orci vulputate vel diam sit lacus facilisi. Pretium massa lorem sit adipiscing magna id sem. Montes, tincidunt molestie eleifend et venenatis. Pellentesque neque, tempor nulla ac a. Morbi facilisis dictumst tristique magna scelerisque vivamus dictum hendrerit."
-        }
-      ],
       props: ["author"],
       arrows: require("../../assets/arrow_icon.png")
     };

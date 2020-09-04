@@ -1,7 +1,7 @@
 <template>
   <div>
     <ul>
-      <li v-for="(project,index) in projects" v-bind:key="index">
+      <li v-for="(project,index) in author.projects" v-bind:key="index">
         <router-link
           v-bind:to="{ name: 'details', params: { projectId: project._id} }"
         >{{project.title}}</router-link>
@@ -14,9 +14,10 @@
 export default {
   name: "Admin-Projects",
   components: {},
+  props: ["author"],
   data: function() {
     return {
-      projects: []
+
     };
   },
   methods: {
