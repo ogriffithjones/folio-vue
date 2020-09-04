@@ -7,6 +7,7 @@ Vue.use(VueRouter);
 import Designers from '@/components/designers/index'
 import Home from '@/components/home/index'
 import About from '@/components/about/index'
+import EditProjects from '@/components/admin/EditProjects.vue'
 
 const routes = [
   {
@@ -18,7 +19,13 @@ const routes = [
   },{
     path: '/about',
     component: About
+  },
+  {
+    name:"edit",
+    path:"/admin/EditProjects",
+    component:EditProjects
   }
+
 ]
 
 const router = new VueRouter({
