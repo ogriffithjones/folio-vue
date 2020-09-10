@@ -16,10 +16,7 @@ export default {
 
 body {
   background-color: $primary-bannana;
-}
-
-h1 {
-  @include heading-large;
-  color: $seccondary-sun_burn;
+  margin: unset;
+  padding: unset;
 }
 </style>
