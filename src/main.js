@@ -3,10 +3,14 @@ import App from './App.vue'
 import VueRouter from 'vue-router'
 Vue.use(VueRouter);
 
+import VueResource from "vue-resource";
+Vue.use(VueResource);
+
 // Pages
 import Designers from '@/components/designers/index'
 import Home from '@/components/home/index'
 import About from '@/components/about/index'
+
 
 const routes = [
   {

@@ -1,6 +1,5 @@
 <template>
 <div>
-    Hey
     <Designers/>
 </div>
 </template>
