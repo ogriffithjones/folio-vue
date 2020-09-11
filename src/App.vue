@@ -16,6 +16,7 @@ export default {
 
 body {
   background-color: $primary-bannana;
+  margin: unset;
 }
 
 h1 {
