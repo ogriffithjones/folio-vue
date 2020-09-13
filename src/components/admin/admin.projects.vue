@@ -3,7 +3,7 @@
     <h1>Projects</h1>
     <ul>
       <li class="project" v-for="(project, index) in projects" :key="index">
-        {{project._id}}
+        {{project.title}}
         <div>
           <a href v-on:click.prevent="deleteProject(project._id)">Delete Article</a>
         </div>
@@ -16,9 +16,10 @@
 export default {
   name: "Admin-Projects",
   components: {},
-  projects: [],
   data: function() {
-    return {};
+    return {
+      projects: [],
+    };
   },
   methods: {
     getProjects: function() {

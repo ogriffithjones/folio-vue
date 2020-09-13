@@ -35,12 +35,12 @@ export default {
     ProjectComponent: projectComponent,
   },
   props: ["author"],
-  projects: [],
   data() {
     return {
       pos: 0,
       posCounter: 0,
       arrows: require("../../assets/arrow_icon.png"),
+      projects: [],
     };
   },
   methods: {
@@ -76,11 +76,14 @@ export default {
         //you are only navigating to /authors on the backend.
         .then(function(data) {
           this.projects = data.body;
+          
+          
         });
     },
   },
   created: function() {
     this.getProjects();
+    console.log(this.projects);
   },
 };
 </script>
