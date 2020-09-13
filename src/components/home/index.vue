@@ -1,7 +1,11 @@
 <template>
   <!-- <HeroSection></HeroSection> -->
   <div>
-    <DesignerSection v-for="(author,index) in authors" v-bind:key="index" :author="author" />
+    <DesignerSection
+      v-for="(author, index) in authors"
+      v-bind:key="index"
+      :author="author"
+    />
   </div>
 </template>
 
@@ -9,34 +13,32 @@
 import designerSection from "./designer.section";
 // import heroSection from "./hero.section";
 
-// PanelSnap
-// import PanelSnap from 'panelsnap';
-
-// const instance = new PanelSnap(defaultOptions);
-
-// var defaultOptions = {
-//     container: document.querySelector('section'),
-//     panelSelector: '.d-section',
-//     directionThreshold: 50,
-//     delay: 0,
-//     duration: 300,
-//     easing: function(t) { return t },
-//   };
-
-
-
 export default {
-  name: "Designer-Section",
+  // name: "Designer-Section",
   // name: "Hero-Section",
+  name: "Home",
   components: {
-    DesignerSection: designerSection
+    DesignerSection: designerSection,
     // HeroSection: heroSection,
   },
   data: function() {
     return {
-      authors: []
+      authors: [],
     };
-  }
+  },
+  methods: {
+    getAuthors: function() {
+      this.$http
+        .get(`${process.env.VUE_APP_API_URL}authors`)
+        //you are only navigating to /authors on the backend.
+        .then(function(data) {
+          this.authors = data.body;
+        });
+    },
+  },
+  created: function() {
+    this.getAuthors();
+  },
 };
 </script>
 

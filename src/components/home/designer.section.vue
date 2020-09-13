@@ -1,17 +1,24 @@
 <template>
   <section>
     <div class="left-col">
-      <h1>{{author}}</h1>
+      <h1>{{ author.name }}</h1>
     </div>
     <div class="right-col">
       <div class="projects">
-        <ProjectCard v-for="(project, index) in author.projects" v-bind:key="index" :project="project" />
+        <ProjectComponent
+          v-for="(project, index) in projects"
+          v-bind:key="index"
+          :project="project"
+        />
       </div>
       <div class="arrows">
-        <img class="arrows__prev" v-on:click="slidePrev" v-bind:src="arrows" alt />
+        <img
+          class="arrows__prev"
+          v-on:click="slidePrev"
+          v-bind:src="arrows"
+          alt
+        />
         <img v-on:click="slideNext" v-bind:src="arrows" alt />
-        <!-- <span v-on:click="slidePrev">Prev</span>
-        <span v-on:click="slideNext">Next</span> -->
       </div>
     </div>
   </section>
@@ -20,20 +27,20 @@
 <script>
 //AnimeJS
 import anime from "animejs/lib/anime.es.js";
-import projectCard from "./project.component";
+import projectComponent from "./project.component";
 
 export default {
   name: "Designer-Section",
   components: {
-    ProjectCard: projectCard
+    ProjectComponent: projectComponent,
   },
   props: ["author"],
+  projects: [],
   data() {
     return {
       pos: 0,
       posCounter: 0,
-      props: ["author"],
-      arrows: require("../../assets/arrow_icon.png")
+      arrows: require("../../assets/arrow_icon.png"),
     };
   },
   methods: {
@@ -45,7 +52,7 @@ export default {
           targets: ".project",
           translateX: this.pos,
           duration: 700,
-          easing: "spring(.5, 100, 80, 0)"
+          easing: "spring(.5, 100, 80, 0)",
         });
       }
     },
@@ -57,11 +64,24 @@ export default {
           targets: ".project",
           translateX: this.pos,
           duration: 700,
-          easing: "spring(.5, 100, 80, 0)"
+          easing: "spring(.5, 100, 80, 0)",
         });
       }
-    }
-  }
+    },
+    getProjects: function() {
+      this.$http
+        .get(
+          `${process.env.VUE_APP_API_URL}authors/${this.author._id}/projects`
+        )
+        //you are only navigating to /authors on the backend.
+        .then(function(data) {
+          this.projects = data.body;
+        });
+    },
+  },
+  created: function() {
+    this.getProjects();
+  },
 };
 </script>
 
@@ -162,6 +182,7 @@ h1 {
     margin-bottom: 20px;
     width: 100%;
     padding-left: 20px;
+    height: 100vh;
   }
 
   // Manual scroll
@@ -174,8 +195,8 @@ h1 {
       height: 30px;
     }
     &__prev {
-        transform: rotate(180deg);
-      }
+      transform: rotate(180deg);
+    }
   }
   //Hide scrollbar for projects
   ::-webkit-scrollbar {

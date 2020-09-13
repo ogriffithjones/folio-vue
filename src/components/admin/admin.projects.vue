@@ -1,10 +1,12 @@
 <template>
   <div>
+    <h1>Projects</h1>
     <ul>
-      <li v-for="(project,index) in author.projects" v-bind:key="index">
-        <router-link
-          v-bind:to="{ name: 'details', params: { projectId: project._id} }"
-        >{{project.title}}</router-link>
+      <li class="project" v-for="(project, index) in projects" :key="index">
+        {{project._id}}
+        <div>
+          <a href v-on:click.prevent="deleteProject(project._id)">Delete Article</a>
+        </div>
       </li>
     </ul>
   </div>
@@ -14,11 +16,9 @@
 export default {
   name: "Admin-Projects",
   components: {},
-  props: ["author"],
+  projects: [],
   data: function() {
-    return {
-
-    };
+    return {};
   },
   methods: {
     getProjects: function() {
@@ -26,23 +26,25 @@ export default {
         .get(`${process.env.VUE_APP_API_URL}projects`)
         .then(function(data) {
           this.projects = data.body;
-        });
+      });
     },
     deleteProject: function(projectId) {
       this.$http.delete(
-        `${process.env.VUE_APP_API_URL}projects/${projectId}`.then(function() {
+        `${process.env.VUE_APP_API_URL}projects/${projectId}`).then(function() {
           this.getProjects();
-        })
-      );
-    }
+        });
+    },
   },
-
   created: function() {
     this.getProjects();
-  }
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 @import "@/scss/_variables.scss";
+
+.projects {
+  display: flex;
+}
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>{{ project.title }}</h1>
-    <p>{{ project.body }}</p>
+    <p>{{ project.description }}</p>
     <img v-bind:src="thumbnail" alt />
   </div>
 </template>
@@ -12,9 +12,9 @@ export default {
   props: ["project"],
   data: function() {
     return {
-      thumbnail: require("../../assets/thumbnail.jpg")
+      thumbnail: require("../../assets/thumbnail.jpg"),
     };
-  }
+  },
 };
 </script>
 
