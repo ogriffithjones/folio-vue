@@ -1,16 +1,32 @@
-# Folio | Vue
+# Fomative-2-Portfolio
 
-## To Install Packages 
+## Project setup
+
+Create a .env file in the root directory (alongside src and public etc) that contains the url of the api e.g. VUE_APP_API_URL=http://example-api4.glitch.me/api/
+
 ```
-npm i
+npm install
 ```
 
-### Run Dev Env
+### Compiles and hot-reloads for development
+
 ```
 npm run serve
 ```
 
-### Build For Production
+### Compiles and minifies for production
+
 ```
 npm run build
+```
+
+### Lints and fixes files
+
+```
+npm run lint
+```
+
+### Customize configuration
+
+See [Configuration Reference](https://cli.vuejs.org/config/).
 ```
