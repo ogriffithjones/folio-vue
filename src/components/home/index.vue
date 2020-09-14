@@ -1,6 +1,6 @@
 <template>
-  <!-- <HeroSection></HeroSection> -->
   <div>
+    <HeroSection></HeroSection>
     <DesignerSection
       v-for="(author, index) in authors"
       v-bind:key="index"
@@ -11,7 +11,7 @@
 
 <script>
 import designerSection from "./designer.section";
-// import heroSection from "./hero.section";
+import heroSection from "./hero.section";
 
 export default {
   // name: "Designer-Section",
@@ -19,7 +19,7 @@ export default {
   name: "Home",
   components: {
     DesignerSection: designerSection,
-    // HeroSection: heroSection,
+    HeroSection: heroSection,
   },
   data: function() {
     return {

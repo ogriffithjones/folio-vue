@@ -47,7 +47,7 @@ export default {
     slidePrev() {
       if (this.posCounter > 0) {
         this.posCounter -= 1;
-        this.pos += 355;
+        this.pos += 375;
         anime({
           targets: ".project",
           translateX: this.pos,
@@ -59,7 +59,7 @@ export default {
     slideNext() {
       if (this.posCounter < this.projects.length - 1) {
         this.posCounter += 1;
-        this.pos -= 355;
+        this.pos -= 375;
         anime({
           targets: ".project",
           translateX: this.pos,

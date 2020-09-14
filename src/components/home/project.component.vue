@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="project">
     <h1>{{ project.title }}</h1>
-    <p>{{ project.description }}</p>
+    <p>{{ project.body }}</p>
     <img v-bind:src="thumbnail" alt />
   </div>
 </template>
@@ -55,6 +55,12 @@ img {
 
 //Desktop
 @media (min-width: 900px) {
+
+  .project {
+    margin: 20px;
+    width: 350px;
+  }
+
   h1 {
     line-height: 1.1em;
   }
